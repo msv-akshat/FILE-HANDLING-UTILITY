@@ -65,9 +65,9 @@ public class FileHandlingUtility {
     public static void writeToFile(String filename, String content) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             writer.write(content); // Overwrites existing file content
-            System.out.println("✅ File written successfully.");
+            System.out.println("File written successfully.");
         } catch (IOException e) {
-            System.out.println("❌ Error writing to file: " + e.getMessage());
+            System.out.println("Error writing to file: " + e.getMessage());
         }
     }
 
@@ -88,7 +88,7 @@ public class FileHandlingUtility {
                 System.out.println(line); // Print each line from the file
             }
         } catch (IOException e) {
-            System.out.println("❌ Error reading file: " + e.getMessage());
+            System.out.println("Error reading file: " + e.getMessage());
         }
     }
 
@@ -97,9 +97,9 @@ public class FileHandlingUtility {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             writer.newLine(); // Move to the next line before writing new content
             writer.write(content);
-            System.out.println("✅ Text appended successfully.");
+            System.out.println("Text appended successfully.");
         } catch (IOException e) {
-            System.out.println("❌ Error modifying file: " + e.getMessage());
+            System.out.println("Error modifying file: " + e.getMessage());
         }
     }
 }
